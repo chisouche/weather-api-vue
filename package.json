@@ -12,6 +12,7 @@
   },
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "core-js": "^3.8.3",
     "node": "^19.3.0",
     "vue": "^3.2.13"
