@@ -37,38 +37,40 @@
                         </div>
                       </div>
                     </div>
-                    <div class="card-body p-0">
-                      <div class="d-flex weakly-weather">
-                        <div class="weakly-weather-item">
-                          <p class="mb-0">
-                            Sun
-                          </p>
-                          <i class="mdi mdi-weather-cloudy"></i>
-                          <p class="mb-0">
-                            30&deg;
-                          </p>
-                        </div>
-                        <div class="weakly-weather-item">
-                          <p class="mb-1">
-                            Mon
-                          </p>
-                          <i class="mdi mdi-weather-hail"></i>
-                          <p class="mb-0">
-                            31&deg;
-                          </p>
-                        </div>
-                      </div>
+                </div>
+                <div class="card card-body p-0">
+                      <div class="carousel-inner">
+                        <div class="row">
+                          <div class="col bottom-card ">
+                          <div class="row row3">Monday</div>
+                            <div class="row row1">21&deg;</div>
+                            <div class="row row2">
+                            <!--img class="img-fluid" src="https://img.icons8.com/ios/100/000000/sun.png"/-->
+                            </div>
+                          </div>
+                          <div class="col">
+                           <div class="row row3">Tuesday</div>
+                            <div class="row row1">20&deg;</div>
+                            <div class="row row2">
+                            <!--img class="img-fluid" src="https://img.icons8.com/ios/100/000000/sun.png"/-->
+                            </div>
+                          </div>
+                          
                     </div>
-                  </div>
+                   
+                    </div>
                   <!--weather card ends-->
                 </div>
-                </div>
-                </div>
+              </div>
+            </div>
+          </div>
       </div>
   </div>
 </template>
 
 <script>
+import moment from 'moment';
+
 export default {
   data(){
     return{
@@ -82,8 +84,8 @@ export default {
         highTemp:"30",
         feelsLike: "15",
         humidity:"55",
-        day: "Tuesday",
-        date : "8 january, 2023"
+        day:moment().format('dddd') ,
+        date : moment().format('MMMM Do YYYY'),
         
       },
 
