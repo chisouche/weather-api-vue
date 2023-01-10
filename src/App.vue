@@ -38,25 +38,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="card card-body p-0">
-                      <div class="carousel-inner">
-                        <div class="row">
-                          <div class="col bottom-card ">
-                          <div class="row row3">Monday</div>
-                            <div class="row row1">21&deg;</div>
-                            <div class="row row2">
-                            <!--img class="img-fluid" src="https://img.icons8.com/ios/100/000000/sun.png"/-->
-                            </div>
-                          </div>
-                          <div class="col">
-                           <div class="row row3">Tuesday</div>
-                            <div class="row row1">20&deg;</div>
-                            <div class="row row2">
-                            <!--img class="img-fluid" src="https://img.icons8.com/ios/100/000000/sun.png"/-->
-                            </div>
-                          </div>
-                          
-                    </div>
+                
                    
                     </div>
                   <!--weather card ends-->
@@ -64,12 +46,11 @@
               </div>
             </div>
           </div>
-      </div>
-  </div>
 </template>
 
 <script>
 import moment from 'moment';
+import WeekChart from '@/components/WeekChart.vue'
 
 export default {
   data(){
@@ -77,6 +58,7 @@ export default {
       citySearch: "",
       weather:{
         cityName:"Amsterdam",
+        location:'',
         country: "NL",
         temperature:12,
         description :"Chances of rain",
@@ -86,6 +68,7 @@ export default {
         humidity:"55",
         day:moment().format('dddd') ,
         date : moment().format('MMMM Do YYYY'),
+        day2:moment().format('dddd') + 1,
         
       },
 
@@ -95,8 +78,8 @@ export default {
   methods:{
     getWeather: async function () {
       console.log(this.citySearch);
-      const key ="a91086b0c7c1845f0d772592b1d4136a";
-      const baseURL = `http://api.openweathermap.org/data/2.5/weather?q=${this.citySearch}&appid=${key}&exclude=current,hourly,minutely,alerts&units=metric`;
+      const key ="725578c73a2f27671e556de5b5bba29a";
+      const baseURL = `http://api.openweathermap.org/data/2.5/weather?q=${this.citySearch}&appid=${key}&cnt=2&alerts&units=metric`;
       
       const response = await fetch(baseURL)
       const data = await response.json()
