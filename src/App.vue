@@ -12,46 +12,154 @@
               />
             </form>
     </div>
-    <div class="page-content page-container " id="page-content">
-        <div class="padding">
-            <div class="row container d-flex justify-content-center">
-              <div class="col-lg-8 grid-margin">
-                  <!--weather card-->
-                  <div class="card card-weather">
-                    <div class="card-body">
-                      <div class="weather-date-location">
-                        <h3>{{weather.day}}</h3>
-                        <p class="text-gray">
-                          <span class="weather-date">{{weather.date}}</span><br>
-                          <span class="weather-location">{{weather.cityName}}, {{weather.country}}</span>
-                        </p>
-                      </div>
-                      <div class="weather-data d-flex">
-                        <div class="mr-auto">
-                          <h4 class="display-3">{{weather.temperature}}
-                            <span class="symbol">&deg;</span>C</h4>
-                          <p>
-                            {{weather.description}}
-                            <!--add icon-->
-                          </p>
-                        </div>
-                      </div>
+    
+    <section class="vh-100">
+  <div class="container py-5 h-100">
+
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-7 col-xl-5">
+
+        <div class="card mb-4 gradient-custom" style="border-radius: 25px;">
+          <div class="card-body p-4">
+
+            <div id="demo1" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ul class="carousel-indicators mb-0">
+                <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                <li data-target="#demo1" data-slide-to="1"></li>
+                <li data-target="#demo1" data-slide-to="2"></li>
+              </ul>
+              <!-- Carousel inner -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-between mb-4 pb-2">
+                    <div>
+                      <h2 class="display-2"><strong>23°C</strong></h2>
+                      <p class="text-muted mb-0">Coimbra, Portugal</p>
                     </div>
-                </div>
-                
-                   
+                    <div>
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu3.webp"
+                        width="150px">
                     </div>
-                  <!--weather card ends-->
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
+        </div>
+
+        <div class="card mb-4" style="border-radius: 25px;">
+          <div class="card-body p-4">
+
+            <div id="demo2" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ul class="carousel-indicators mb-0">
+                <li data-target="#demo2" data-slide-to="0"></li>
+                <li data-target="#demo2" data-slide-to="1" class="active"></li>
+                <li data-target="#demo2" data-slide-to="2"></li>
+              </ul>
+              <!-- Carousel inner -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-around text-center mb-4 pb-3 pt-2">
+                    <div class="flex-column">
+                      <p class="small"><strong>21°C</strong></p>
+                      <i class="fas fa-sun fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>12:00</strong></p>
+                      <p class="mb-0 text-muted" style="font-size: .65rem;">PM</p>
+                    </div>
+                    <div class="flex-column">
+                      <p class="small"><strong>2°C</strong></p>
+                      <i class="fas fa-sun fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>1:00</strong></p>
+                      <p class="mb-0 text-muted" style="font-size: .65rem;">PM</p>
+                    </div>
+                    <div class="flex-column">
+                      <p class="small"><strong>20°C</strong></p>
+                      <i class="fas fa-cloud fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>2:00</strong></p>
+                      <p class="mb-0 text-muted" style="font-size: .65rem;">PM</p>
+                    </div>
+                    <div class="flex-column">
+                      <p class="small"><strong>19°C</strong></p>
+                      <i class="fas fa-cloud fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>3:00</strong></p>
+                      <p class="mb-0 text-muted" style="font-size: .65rem;">PM</p>
+                    </div>
+                    <div class="flex-column">
+                      <p class="small"><strong>18°C</strong></p>
+                      <i class="fas fa-cloud-showers-heavy fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>4:00</strong></p>
+                      <p class="mb-0 text-muted" style="font-size: .65rem;">PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card" style="border-radius: 25px;">
+          <div class="card-body p-4">
+
+            <div id="demo3" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ul class="carousel-indicators mb-0">
+                <li data-target="#demo3" data-slide-to="0"></li>
+                <li data-target="#demo3" data-slide-to="1"></li>
+                <li data-target="#demo3" data-slide-to="2" class="active"></li>
+              </ul>
+              <!-- Carousel inner -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-around text-center mb-4 pb-3 pt-2">
+                    <div class="flex-column">
+                      <p class="small"><strong>21°C</strong></p>
+                      <i class="fas fa-sun fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>Mon</strong></p>
+                    </div>
+                    <div class="flex-column">
+                      <p class="small"><strong>20°C</strong></p>
+                      <i class="fas fa-sun fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>Tue</strong></p>
+                    </div>
+                    <div class="flex-column">
+                      <p class="small"><strong>16°C</strong></p>
+                      <i class="fas fa-cloud fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>Wed</strong></p>
+                    </div>
+                    <div class="flex-column">
+                      <p class="small"><strong>17°C</strong></p>
+                      <i class="fas fa-cloud fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>Thu</strong></p>
+                    </div>
+                    <div class="flex-column">
+                      <p class="small"><strong>18°C</strong></p>
+                      <i class="fas fa-cloud-showers-heavy fa-2x mb-3" style="color: #ddd;"></i>
+                      <p class="mb-0"><strong>Fri</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+    
+  </div>
 </template>
 
 <script>
 import moment from 'moment';
-import WeekChart from '@/components/WeekChart.vue'
-
+// 
 export default {
   data(){
     return{
@@ -62,13 +170,9 @@ export default {
         country: "NL",
         temperature:12,
         description :"Chances of rain",
-        lowTemp: "19",
-        highTemp:"30",
-        feelsLike: "15",
-        humidity:"55",
+
         day:moment().format('dddd') ,
         date : moment().format('MMMM Do YYYY'),
-        day2:moment().format('dddd') + 1,
         
       },
 
