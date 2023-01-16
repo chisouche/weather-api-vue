@@ -1,8 +1,9 @@
 <template>
 <div id="main">
-    <div class="container-fluid center-text">
+
+<div class="container-fluid center-text">
       <h1 class="title">Weather App</h1> 
-          <form class="search-location" v-on:submit.prevent="getWeather">
+         <form class="search-location" v-on:submit.prevent="getWeather">
               <input 
                 type="text"
                 class="form-control text-muted form-rounded p-4 shadow-sm"
@@ -13,7 +14,7 @@
             </form>
     </div>
     
-    <section class="vh-100">
+<section class="vh-100">
   <div class="container py-5 h-100">
 
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -23,19 +24,14 @@
           <div class="card-body p-4">
 
             <div id="demo1" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ul class="carousel-indicators mb-0">
-                <li data-target="#demo1" data-slide-to="0" class="active"></li>
-                <li data-target="#demo1" data-slide-to="1"></li>
-                <li data-target="#demo1" data-slide-to="2"></li>
-              </ul>
               <!-- Carousel inner -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="d-flex justify-content-between mb-4 pb-2">
                     <div>
-                      <h2 class="display-2"><strong>23°C</strong></h2>
-                      <p class="text-muted mb-0">Coimbra, Portugal</p>
+                      <h2 class="display-2">{{weather.temperature}}</h2>
+                      <p class="text-muted mb-0">{{ weather.cityName}}, {{ weather.country}}</p>
+                      <span> {{ weather.description}}</span>
                     </div>
                     <div>
                       <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu3.webp"
@@ -153,37 +149,37 @@
 
   </div>
 </section>
-    
-  </div>
+
+</div>
 </template>
+
 
 <script>
 import moment from 'moment';
-// 
 export default {
   data(){
     return{
       citySearch: "",
       weather:{
         cityName:"Amsterdam",
-        location:'',
         country: "NL",
-        temperature:12,
+        temperature:"",
         description :"Chances of rain",
-
+        lowTemp: "19",
+        highTemp:"30",
+        feelsLike: "15",
+        humidity:"55",
         day:moment().format('dddd') ,
         date : moment().format('MMMM Do YYYY'),
         
       },
-
     };
   }, 
-
   methods:{
     getWeather: async function () {
       console.log(this.citySearch);
       const key ="725578c73a2f27671e556de5b5bba29a";
-      const baseURL = `http://api.openweathermap.org/data/2.5/weather?q=${this.citySearch}&appid=${key}&cnt=2&alerts&units=metric`;
+      const baseURL = `http://api.openweathermap.org/data/2.5/weather?q=${this.citySearch}&appid=${key}&exclude=current,hourly,minutely,alerts&units=metric`;
       
       const response = await fetch(baseURL)
       const data = await response.json()
@@ -193,9 +189,7 @@ export default {
       this.weather.country = data.sys.country;
       this.weather.temperature = Math.round(data.main.temp);
       this.weather.description= data.weather[0].description;
-     
-
-  }
+    }
   }
 };
 </script>

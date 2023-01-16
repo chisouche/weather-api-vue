@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
+* {
+  font-family: 'Roboto', sans-serif;
+}
 
-
-#main{
+body {
   background-color: rgb(117, 106, 96);
 
 }
